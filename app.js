@@ -26,9 +26,10 @@ const alipayNotifyHandler = async (req, res) => {
 
 const server = http.createServer((req, res) => {
 	// 确认路径和请求方法
-	if (req.url === '/alipay_notify' && req.method === 'POST') {
+	// if (req.url === '/alipay_notify' && req.method === 'POST') {
+		console.log(req.url, req.method)
 		return alipayNotifyHandler(req, res)
-	}
+	// }
 
 	res.writeHead(404, {'Content-Type': 'text-plain;charset=UTF-8'})
 	res.end('404 没有找到')
