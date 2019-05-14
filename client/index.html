@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	
+	<script type="text/javascript">
+		var ws = new WebSocket('ws://localhost:8888?name=说散就散')
+
+		ws.onopen = function(e) {
+			console.log('open', e)
+		}
+
+		ws.onmessage = function(e) {
+			var message = e.data
+			console.log('message', e)
+		}
+
+		ws.onclose = function(e) {
+			console.log('close', e)
+		}
+
+		ws.onerror = function(e) {
+			console.log('error', e)
+		}
+	</script>
+</body>
+</html>
