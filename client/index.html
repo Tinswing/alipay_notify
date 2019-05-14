@@ -7,7 +7,7 @@
 <body>
 	
 	<script type="text/javascript">
-		var ws = new WebSocket('ws://localhost:8888?name=说散就散')
+		var ws = new WebSocket('ws://118.126.108.36:8888?name=可能否')
 
 		ws.onopen = function(e) {
 			console.log('open', e)
@@ -15,7 +15,7 @@
 
 		ws.onmessage = function(e) {
 			var message = e.data
-			console.log('message', e)
+			console.log('message', message)
 		}
 
 		ws.onclose = function(e) {

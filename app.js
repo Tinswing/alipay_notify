@@ -6,6 +6,8 @@ const socket = require('./websocket.js')
 const alipayNotifyHandler = async (req, res) => {
 	const result = await bodyParser(req)
 	
+	console.log(result)
+
 	if (result.trade_status !== 'TRADE_SUCCESS') { return }
 
 	const name = decodeURIComponent(result.passback_params)
