@@ -8,7 +8,7 @@ module.exports = (req) => new Promise((resolve, reject) => {
 		})
 
 		req.on('end', () => {
-			data = decodeURI(data)
+			data = decodeURIComponent(data)
 			var param = querystring.parse(data)
 			resolve(param)
 		})

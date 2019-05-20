@@ -77,7 +77,6 @@ const wsserver = {
 		    })
 
 		    ws.on('close', function(e) {
-		    	// 更新用户最后登录时间，在线状态
 
 		    })
 		})
